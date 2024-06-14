@@ -133,7 +133,7 @@ export class HomePageService {
   }
 
   private async getCarAppExpenseTotal(): Promise<number> {
-    const currentMonth = getCurrentMonth() + 1;
+    const currentMonth = getCurrentMonth();
     const currentYear = getCurrentYear();
     const nineNine =
       await this.expenseHistoryRepository.sumValuesByMonthAndYearAndLikeItem(
@@ -152,7 +152,7 @@ export class HomePageService {
   }
 
   private async getFixedExpenseTotal(): Promise<number> {
-    const currentMonth = getCurrentMonth() + 1;
+    const currentMonth = getCurrentMonth();
     const currentYear = getCurrentYear();
     return (
       this.expenseHistoryRepository.sumValuesByMonthAndYearAndLikeItem(
@@ -164,7 +164,7 @@ export class HomePageService {
   }
 
   private async getIfoodExpenseTotal(): Promise<number> {
-    const currentMonth = getCurrentMonth() + 1;
+    const currentMonth = getCurrentMonth();
     const currentYear = getCurrentYear();
     return (
       this.expenseHistoryRepository.sumValuesByMonthAndYearAndLikeItem(
@@ -176,7 +176,7 @@ export class HomePageService {
   }
 
   private async getGirlfriendExpenseTotal(): Promise<number> {
-    const currentMonth = getCurrentMonth() + 1;
+    const currentMonth = getCurrentMonth();
     const currentYear = getCurrentYear();
     return (
       this.expenseHistoryRepository.sumValuesByMonthAndYearAndLikeItem(
